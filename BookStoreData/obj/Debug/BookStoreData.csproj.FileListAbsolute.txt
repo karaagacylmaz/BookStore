@@ -1,0 +1,11 @@
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\BookStoreData.dll.config
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\BookStoreData.dll
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\BookStoreData.pdb
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\EntityFramework.dll
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\EntityFramework.xml
+c:\users\soner\source\repos\BookStore\BookStoreData\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\soner\source\repos\BookStore\BookStoreData\obj\Debug\BookStoreData.csproj.CoreCompileInputs.cache
+c:\users\soner\source\repos\BookStore\BookStoreData\obj\Debug\BookStoreData.csproj.CopyComplete
+c:\users\soner\source\repos\BookStore\BookStoreData\obj\Debug\BookStoreData.dll
+c:\users\soner\source\repos\BookStore\BookStoreData\obj\Debug\BookStoreData.pdb

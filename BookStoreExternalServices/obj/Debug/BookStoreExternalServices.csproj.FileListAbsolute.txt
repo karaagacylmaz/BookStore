@@ -1,0 +1,5 @@
+c:\users\soner\source\repos\BookStore\BookStoreExternalServices\bin\Debug\BookStoreExternalServices.dll
+c:\users\soner\source\repos\BookStore\BookStoreExternalServices\bin\Debug\BookStoreExternalServices.pdb
+c:\users\soner\source\repos\BookStore\BookStoreExternalServices\obj\Debug\BookStoreExternalServices.csproj.CoreCompileInputs.cache
+c:\users\soner\source\repos\BookStore\BookStoreExternalServices\obj\Debug\BookStoreExternalServices.dll
+c:\users\soner\source\repos\BookStore\BookStoreExternalServices\obj\Debug\BookStoreExternalServices.pdb

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/BookStoreData" />
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/BookStoreService.DTOs" />
+      <xs:element name="GetAuthorBooks">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BookStoreData" minOccurs="0" name="author" nillable="true" type="q1:Author" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuthorBooksResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookStoreService.DTOs" minOccurs="0" name="GetAuthorBooksResult" nillable="true" type="q2:ArrayOfBookDTO" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuthors">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuthorsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BookStoreService.DTOs" minOccurs="0" name="GetAuthorsResult" nillable="true" type="q3:ArrayOfAuthorDTO" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BookStoreData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BookStoreData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="Author">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
+          <xs:element minOccurs="0" name="Books" nillable="true" type="tns:ArrayOfBook" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Author" nillable="true" type="tns:Author" />
+      <xs:complexType name="ArrayOfBook">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Book" nillable="true" type="tns:Book" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfBook" nillable="true" type="tns:ArrayOfBook" />
+      <xs:complexType name="Book">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Author" nillable="true" type="tns:Author" />
+          <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
+          <xs:element minOccurs="0" name="BookId" type="xs:int" />
+          <xs:element minOccurs="0" name="Format" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsValidIsbn" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Isbn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextStockDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Preface" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Publisher" nillable="true" type="tns:Publisher" />
+          <xs:element minOccurs="0" name="PublisherId" type="xs:int" />
+          <xs:element minOccurs="0" name="QuantityLeft" type="xs:int" />
+          <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Version" type="xs:int" />
+          <xs:element minOccurs="0" name="WarehouseLocation" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Book" nillable="true" type="tns:Book" />
+      <xs:complexType name="Publisher">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Books" nillable="true" type="tns:ArrayOfBook" />
+          <xs:element minOccurs="0" name="PublisherId" type="xs:int" />
+          <xs:element minOccurs="0" name="PublisherName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Publisher" nillable="true" type="tns:Publisher" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BookStoreService.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BookStoreService.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfBookDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="BookDTO" nillable="true" type="tns:BookDTO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfBookDTO" nillable="true" type="tns:ArrayOfBookDTO" />
+      <xs:complexType name="BookDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:BaseDTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AuthorName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="BookId" type="xs:int" />
+              <xs:element minOccurs="0" name="Format" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="IsValidIsbn" type="xs:boolean" />
+              <xs:element minOccurs="0" name="Isbn" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="NextStockDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Preface" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="PublisherName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="QuantityLeft" type="xs:int" />
+              <xs:element minOccurs="0" name="ReleaseDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Version" type="xs:int" />
+              <xs:element minOccurs="0" name="WarehouseLocation" type="xs:int" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="BookDTO" nillable="true" type="tns:BookDTO" />
+      <xs:complexType name="BaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusCode" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="BaseDTO" nillable="true" type="tns:BaseDTO" />
+      <xs:complexType name="ArrayOfAuthorDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="AuthorDTO" nillable="true" type="tns:AuthorDTO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfAuthorDTO" nillable="true" type="tns:ArrayOfAuthorDTO" />
+      <xs:complexType name="AuthorDTO">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:BaseDTO">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
+              <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+              <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="AuthorDTO" nillable="true" type="tns:AuthorDTO" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthorService_GetAuthorBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorBooks" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetAuthorBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetAuthors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthors" />
+  </wsdl:message>
+  <wsdl:message name="IAuthorService_GetAuthors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthorService">
+    <wsdl:operation name="GetAuthorBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/GetAuthorBooks" message="tns:IAuthorService_GetAuthorBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/GetAuthorBooksResponse" message="tns:IAuthorService_GetAuthorBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthorService/GetAuthors" message="tns:IAuthorService_GetAuthors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthorService/GetAuthorsResponse" message="tns:IAuthorService_GetAuthors_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAuthorService" type="tns:IAuthorService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthorBooks">
+      <soap:operation soapAction="http://tempuri.org/IAuthorService/GetAuthorBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthors">
+      <soap:operation soapAction="http://tempuri.org/IAuthorService/GetAuthors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthorService">
+    <wsdl:port name="BasicHttpBinding_IAuthorService" binding="tns:BasicHttpBinding_IAuthorService">
+      <soap:address location="http://localhost:58660/AuthorService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

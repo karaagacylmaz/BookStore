@@ -1,0 +1,16 @@
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreBusiness.dll
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreBusiness.pdb
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreData.dll
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreExternalServices.dll
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreModel.dll
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\EntityFramework.dll
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreData.pdb
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreData.dll.config
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreExternalServices.pdb
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\BookStoreModel.pdb
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\bin\Debug\EntityFramework.xml
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\obj\Debug\BookStoreBusiness.csprojAssemblyReference.cache
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\obj\Debug\BookStoreBusiness.csproj.CoreCompileInputs.cache
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\obj\Debug\BookStoreBusiness.csproj.CopyComplete
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\obj\Debug\BookStoreBusiness.dll
+c:\users\soner\source\repos\BookStore\BookStoreBusiness\obj\Debug\BookStoreBusiness.pdb
